@@ -21,7 +21,7 @@ public class Server {
 			
 			// Create outputstream and send a string
 			dOut = new DataOutputStream(s.getOutputStream());
-			dOut.writeUTF("hi client");
+			dOut.writeChars("hi client");
 			dOut.flush();
 			
 			// Close everything
