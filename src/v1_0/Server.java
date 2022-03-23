@@ -11,18 +11,21 @@ public class Server {
 	private Socket s;
 	private DataOutputStream dOut;
 	
-	void Server() {
+	Server() {
 		
 		try {
 			
 			// Create sockets
+			System.out.println("Creating Server");
 			ss = new ServerSocket(6666);
 			s = ss.accept();
+			System.out.println("Connected to client");
 			
 			// Create outputstream and send a string
 			dOut = new DataOutputStream(s.getOutputStream());
-			dOut.writeChars("hi client");
+			dOut.writeUTF("Hi");
 			dOut.flush();
+			System.out.println("Send message");
 			
 			// Close everything
 			dOut.close();
