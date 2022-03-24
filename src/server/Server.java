@@ -1,4 +1,4 @@
-package v1_0;
+package server;
 
 import java.io.DataOutputStream;
 import java.io.IOException;
@@ -10,6 +10,12 @@ public class Server {
 	private ServerSocket ss;
 	private Socket s;
 	private DataOutputStream dOut;
+	
+	public static void main(String[] args) {
+		
+		new Server();
+		
+	}
 	
 	Server() {
 		
